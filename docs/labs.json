@@ -2,14 +2,14 @@
   {
     "week": "week-01",
     "title": "Developer Environment & GitHub Repository Setup",
-    "status": "ready",
-    "sourceOrigin": "course-starter",
-    "originalRepoUrl": "https://github.com/napat68/engse203-student-labs-685432100293",
-    "originalCommit": "",
-    "pullRequestUrl": "",
+    "status": "submitted",
+    "sourceOrigin": "https://github.com/napat68/engse203-lab01-685432100293",
+    "originalRepoUrl": "https://github.com/napat68/engse203-lab01-685432100293",
+    "originalCommit": "b040ee7",
+    "pullRequestUrl": "https://github.com/napat68/engse203-student-labs-685432100293/pull/5",
     "submissionTag": "lab-01-submission-v1",
     "testStatus": "pass",
-    "notes": "ตั้งค่า Developer Environment และ Git/GitHub สำเร็จ ทดสอบ npm run start และ npm run check ผ่านเรียบร้อย",
+    "notes": "ตั้งค่า Developer Environment และ Git/GitHub สำเร็จ ทดสอบ npm run start, npm run check และ Repository Verification ผ่านเรียบร้อย",
     "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-01/",
     "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-01/labs/week-01/source",
     "hasPublish": false,
@@ -61,7 +61,7 @@
     "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-04/",
     "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-04/labs/week-04/source",
     "hasPublish": true,
-    "sourceEntries": 13
+    "sourceEntries": 12
   },
   {
     "week": "week-05",
@@ -77,6 +77,6 @@
     "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-05/",
     "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-05/labs/week-05/source",
     "hasPublish": false,
-    "sourceEntries": 12
+    "sourceEntries": 11
   }
 ]
