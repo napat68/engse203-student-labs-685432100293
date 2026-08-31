@@ -2,10 +2,10 @@
 
 > กรอกให้ครบ **ก่อน** commit ครั้งสุดท้าย
 
-**ชื่อ–นามสกุล:**
-**รหัสนักศึกษา:**
-**Sec:** 1  **ชุดข้อสอบ:** A
-**Branch ที่ส่ง:** `midterm`
+**ชื่อ–นามสกุล:** นางสาวนภัสประภา กุลสุทธิเสถียร  
+**รหัสนักศึกษา:** 68543210029-3  
+**Sec:** 1  **ชุดข้อสอบ:** A  
+**Branch ที่ใช้:** `midterm`
 
 ---
 
@@ -14,19 +14,19 @@
 รันคำสั่ง `npm run build` แล้ววางบรรทัดสุดท้ายที่ขึ้นว่า `✓ built in ...` ลงตรงนี้
 
 ```
-(วางผลตรงนี้)
+✓ built in 182ms
 ```
 
 ---
 
 ## เช็คลิสต์ (ติ๊ก x ในวงเล็บเมื่อทำเสร็จ)
 
-- [ ] B1 แก้ครบ 6 จุด + `B1_BUGS.md` กรอกครบ
-- [ ] B2 ค้นหาทำงานครบ 4 checkpoint
-- [ ] B3 ปุ่ม "ทำเสร็จ" persist + รอด refresh (F5 แล้วยังอยู่)
-- [ ] B4 `PriorityBadge` + ใช้ใน `RequestCard`
-- [ ] `npm run build` ผ่าน
-- [ ] `AI_USAGE.md` กรอกครบ
+- [x] B1 แก้ครบ 6 จุด + `B1_BUGS.md` ครบ
+- [x] B2 ค้นหาทำงานครบ 4 checkpoint
+- [x] B3 ปุ่ม "ทำเสร็จ" persist + รอด refresh
+- [x] B4 `PriorityBadge` + ใช้ใน `RequestCard`
+- [x] `npm run build` ผ่าน
+- [x] `AI_USAGE.md` ครบ
 - [ ] push branch `midterm` + ติด tag `midterm-submission-v1`
 
 ---
