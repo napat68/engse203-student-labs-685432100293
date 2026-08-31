@@ -8,6 +8,10 @@ import SummaryPanel from '../components/SummaryPanel.jsx';
 import useManualReload from '../hooks/useManualReload.js';
 import { deleteRequest, getRequests, resetRequests } from '../services/requestService.js';
 
+function handleMarkDone(requestId) {
+  console.log('mark done', requestId);
+}
+
 function DashboardPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const scenario = searchParams.get('scenario') ?? '';
@@ -18,6 +22,7 @@ function DashboardPage() {
   const [searchText, setSearchText] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [notice, setNotice] = useState('');
+  
 
   useEffect(() => {
     let ignore = false;
@@ -116,7 +121,12 @@ function DashboardPage() {
               onChange={(event) => setSearchText(event.target.value)}
             />
 
-            <RequestList requests={filteredRequests} onDeleteRequest={handleDelete} />
+            <RequestList
+              requests={filteredRequests}
+              onDeleteRequest={handleDelete}
+              onMarkDone={handleMarkDone}
+            />
+            
           </section>
         </>
       )}
