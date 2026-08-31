@@ -19,3 +19,4 @@
 | 12:45 | B2 | เพิ่มข้อความเมื่อค้นหาไม่พบ และตรวจว่า summary ยังใช้ข้อมูลทั้งหมด | แก้ RequestList ให้แสดงข้อความเมื่อ requests ว่าง และคง summary จาก requests เดิม | ทดสอบค้น `zzz` แล้วไม่พบรายการ พร้อมตรวจ summary ยังเป็น 5/3/1/1 |
 | 12:57 | B3 | เพิ่มปุ่มทำเสร็จเฉพาะคำร้องที่ยังไม่ completed | เพิ่ม `onMarkDone` callback จาก Dashboard ผ่าน RequestList ไป RequestCard และตรวจ `request.status !== 'completed'` | ทดสอบพบปุ่มใน REQ-001, REQ-002, REQ-004, REQ-005 และไม่มีปุ่มใน REQ-003 |
 | 13:10 | B3 | เชื่อมปุ่มทำเสร็จกับการอัปเดตสถานะ | เรียก `updateRequestStatus(requestId, 'completed')` และใช้ `setRequests(nextRequests)` พร้อมส่ง callback ผ่าน RequestList | ทดสอบ REQ-001 เปลี่ยนเป็น completed ทันที ปุ่มหาย และ summary เป็น 5/2/1/2 |
+| 13:14 | B3 | ตรวจสอบว่าการเปลี่ยนสถานะยังคงอยู่หลัง refresh | ตรวจการ persist ผ่าน localStorage โดยไม่แก้ service | กด F5 แล้ว summary ยังเป็น 5/2/1/2 และตรวจพบ key `engse203-campus-requests-v1` ใน Local Storage |
