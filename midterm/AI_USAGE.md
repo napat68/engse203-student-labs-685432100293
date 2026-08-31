@@ -21,3 +21,4 @@
 | 13:10 | B3 | เชื่อมปุ่มทำเสร็จกับการอัปเดตสถานะ | เรียก `updateRequestStatus(requestId, 'completed')` และใช้ `setRequests(nextRequests)` พร้อมส่ง callback ผ่าน RequestList | ทดสอบ REQ-001 เปลี่ยนเป็น completed ทันที ปุ่มหาย และ summary เป็น 5/2/1/2 |
 | 13:14 | B3 | ตรวจสอบว่าการเปลี่ยนสถานะยังคงอยู่หลัง refresh | ตรวจการ persist ผ่าน localStorage โดยไม่แก้ service | กด F5 แล้ว summary ยังเป็น 5/2/1/2 และตรวจพบ key `engse203-campus-requests-v1` ใน Local Storage |
 | 13:19 | B4 | สร้าง PriorityBadge component สำหรับ priority พื้นฐาน | สร้าง component ให้ urgent แสดง `เร่งด่วน` และ normal แสดง `ปกติ` พร้อม class ตามโจทย์ | ตรวจโค้ดและรัน `npm run build` ว่า build ผ่าน โดยยังไม่เชื่อมกับ RequestCard ตาม checkpoint B4.1 |
+| 13:27 | B4 | เพิ่มกรณี priority ที่ไม่รู้จักหรือไม่ได้ระบุ | เพิ่ม fallback ให้ PriorityBadge แสดง `ไม่ระบุ` พร้อม class `priority-unknown` | ทดสอบชั่วคราวด้วย `priority="high"` พบว่าแสดง `ไม่ระบุ` แล้วนำโค้ดทดสอบออก |
