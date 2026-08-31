@@ -19,16 +19,16 @@
 - แก้อย่างไร: เปลี่ยนเป็น request.status === statusFilter เพื่อให้แสดงเฉพาะรายการที่ตรงกับสถานะที่เลือก
 
 ## บั๊กที่ 4 — อาการ: เปลี่ยน URL จาก REQ-001 เป็น REQ-002 แล้วข้อมูลไม่เปลี่ยน
-- ไฟล์/บรรทัด:
-- สาเหตุ:
-- แก้อย่างไร:
+- ไฟล์/บรรทัด: src/pages/RequestDetailPage.jsx ส่วน useEffect
+- สาเหตุ: useEffect ใช้ requestId แต่ไม่มี requestId อยู่ใน dependency array ทำให้เมื่อ URL เปลี่ยน effect ไม่โหลดข้อมูลใหม่
+- แก้อย่างไร: เพิ่ม requestId ใน dependency array เป็น [requestId, reloadKey]
 
 ## บั๊กที่ 5 — อาการ: กด "ลบ" แล้วรายการยังอยู่ ต้องรีเฟรชถึงหาย
-- ไฟล์/บรรทัด:
-- สาเหตุ:
-- แก้อย่างไร:
+- ไฟล์/บรรทัด: src/pages/DashboardPage.jsx ส่วน handleDelete
+- สาเหตุ: หลัง deleteRequest คืน nextRequests แล้ว กลับใช้ setRequests(requests) ซึ่งเป็น state เก่า ทำให้ UI ยังแสดงรายการเดิม
+- แก้อย่างไร: เปลี่ยนเป็น setRequests(nextRequests) เพื่ออัปเดต state ด้วยข้อมูลหลังลบ
 
 ## บั๊กที่ 6 — อาการ: กด "Reset Demo Data" แล้วหน้าพัง/ว่างเปล่า
-- ไฟล์/บรรทัด:
-- สาเหตุ:
-- แก้อย่างไร:
+- ไฟล์/บรรทัด: src/pages/DashboardPage.jsx ส่วน handleReset
+- สาเหตุ: resetRequests() เป็น async function แต่ไม่ได้ await ทำให้ Promise ถูกนำไปเก็บใน requests แทน Array
+- แก้อย่างไร: ใช้ await resetRequests() แล้วนำ Array ที่ได้มา setRequests()

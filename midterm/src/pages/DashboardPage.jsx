@@ -6,11 +6,7 @@ import LoadingState from '../components/LoadingState.jsx';
 import RequestList from '../components/RequestList.jsx';
 import SummaryPanel from '../components/SummaryPanel.jsx';
 import useManualReload from '../hooks/useManualReload.js';
-import { deleteRequest, getRequests, resetRequests } from '../services/requestService.js';
-
-function handleMarkDone(requestId) {
-  console.log('mark done', requestId);
-}
+import { deleteRequest, getRequests, resetRequests, updateRequestStatus,} from '../services/requestService.js';
 
 function DashboardPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -82,6 +78,15 @@ function DashboardPage() {
     }
   }
 
+  async function handleMarkDone(requestId) {
+    try {
+      const nextRequests = await updateRequestStatus(requestId, 'completed');
+      setRequests(nextRequests);
+    } catch (error) {
+      setErrorMessage(error.message);
+    }
+  }
+
   async function handleReset() {
     if (!window.confirm('ต้องการคืนข้อมูลตัวอย่างเริ่มต้นหรือไม่?')) return;
     try {
@@ -126,7 +131,7 @@ function DashboardPage() {
               onDeleteRequest={handleDelete}
               onMarkDone={handleMarkDone}
             />
-            
+
           </section>
         </>
       )}
