@@ -49,10 +49,12 @@ function DashboardPage() {
     completed: requests.filter((request) => request.status === 'completed').length,
   }), [requests]);
 
-  const filteredRequests = statusFilter === 'all'
-    ? requests
+  const normalizedSearch = searchText.trim().toLowerCase();
 
-    : requests.filter((request) => request.status === statusFilter);
+  const filteredRequests = requests.filter((request) =>
+    request.requesterName.toLowerCase().includes(normalizedSearch)
+    || request.details.toLowerCase().includes(normalizedSearch)
+  );
 
   function handleRetry() {
     if (scenario) setSearchParams({});
@@ -107,7 +109,7 @@ function DashboardPage() {
               value={searchText}
               onChange={(event) => setSearchText(event.target.value)}
             />
-            
+
             <RequestList requests={filteredRequests} onDeleteRequest={handleDelete} />
           </section>
         </>
