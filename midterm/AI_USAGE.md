@@ -1,25 +1,54 @@
-# AI Usage Log — สอบกลางภาค
+# AI Usage Log — สอบกลางภาค ENGSE203 (ภาคปฏิบัติ)
 
-ชื่อ-รหัส: นางสาวนภัสประภา กุลสุทธิเสถียร 68543210029-3
+**ชื่อ–นามสกุล:** นางสาวนภัสประภา กุลสุทธิเสถียร **รหัส:** 685432100293 **Sec:** 1 **ชุด:** A
 
-บันทึกทุกครั้งที่ใช้ AI ระหว่างสอบ
+---
 
-| เวลา | งาน (B1/B2/B3/B4) | ถาม AI ว่าอะไร | ใช้คำตอบส่วนไหน | แก้เอง/ตรวจสอบอย่างไร |
+## วิธีกรอก (อ่านก่อนเริ่ม)
+
+บันทึก **ทุกครั้ง** ที่ถาม AI (ChatGPT, Claude, Copilot, Gemini ฯลฯ) ระหว่างสอบ — **1 แถว = 1 ครั้งที่ถาม**
+
+- ไม่ต้องวางบทสนทนาทั้งหมด — **สรุปสั้น ๆ** พอให้กลับมาอธิบายใน oral ได้
+- ถ้า **ไม่ได้ใช้ AI** ในงานไหน ให้เขียนบรรทัด `ไม่ได้ใช้ AI` ของงานนั้น
+- ช่องสำคัญที่สุดคือช่องสุดท้าย **"ฉันทำอะไรต่อ"** — เป็นหลักฐานว่าเข้าใจและตรวจสอบด้วยตนเอง
+
+### ความหมายแต่ละคอลัมน์
+
+| คอลัมน์ | ใส่อะไร |
+|---|---|
+| **เวลา** | เวลาโดยประมาณ |
+| **งาน** | `B1` / `B2` / `B3` / `B4` |
+| **Prompt ที่ถาม** | คำถาม/คำสั่งที่ถาม AI |
+| **AI ตอบว่าอะไร** | สรุปคำตอบหรือโค้ดที่ AI แนะนำ |
+| **ฉันทำอะไรต่อ** | สิ่งที่นำไปใช้/แก้ไข และวิธีตรวจสอบผล |
+
+---
+
+## บันทึกของฉัน
+
+| เวลา | งาน | Prompt ที่ถาม | AI ตอบว่าอะไร | ฉันทำอะไรต่อ |
 |---|---|---|---|---|
-| 11:18 | B1 | ตรวจสอบสาเหตุ React เตือนเรื่อง unique key ใน RequestList | เพิ่ม `key={request.id}` ให้ RequestCard ใน `map()` | ตรวจโค้ด RequestList.jsx และทดสอบหน้า Dashboard/Console หลังแก้ |
-| 11:34 | B1 | ตรวจสอบสาเหตุ summary pending นับผิด | ตรวจเงื่อนไข status และแก้ `completed` เป็น `pending` | ตรวจ DashboardPage.jsx และทดสอบ Summary รวมถึงตรวจ localStorage |
-| 11:45 | B1 | ตรวจสอบสาเหตุตัวกรองสถานะแสดงรายการไม่ตรงกับที่เลือก | ตรวจเงื่อนไข filteredRequests และเปลี่ยน `!==` เป็น `===` | ทดสอบเลือก pending แล้วพบว่าแสดงเฉพาะรายการสถานะ pending |
-| 11:48 | B1 | ตรวจสอบสาเหตุเปลี่ยน requestId ใน URL แล้วข้อมูลไม่เปลี่ยน | ตรวจ dependency ของ `useEffect` และเพิ่ม `requestId` | ทดสอบเปลี่ยน URL จาก REQ-001 เป็น REQ-002 แล้วข้อมูลเปลี่ยนตามทันที |
-| 11:58 | B1 | ตรวจสอบสาเหตุลบข้อมูลแล้ว card ยังอยู่จน refresh | ตรวจ state หลัง `deleteRequest` และใช้ `nextRequests` | แก้ `setRequests(requests)` เป็น `setRequests(nextRequests)` และทดสอบว่าการ์ดหายทันที |
-| 12:09 | B1 | ตรวจสอบสาเหตุกด Reset Demo Data แล้วหน้าพัง | ตรวจ async/await ของ `resetRequests` | ตรวจ service พบว่า resetRequests เป็น async จึง `await` ก่อน setRequests และทดสอบข้อมูลกลับมา 5 รายการ |
-| 12:22 | B2 | เพิ่มช่องค้นหาแบบ controlled input | เพิ่ม state searchText และผูก value/onChange กับ input | ทดสอบพิมพ์ข้อความได้ และรายการยังไม่ถูกกรองตาม checkpoint B2.1 |
-| 12:29 | B2 | ทำระบบค้นหาจากชื่อผู้แจ้งหรือรายละเอียด | ใช้ `trim()`, `toLowerCase()` และ `includes()` เพื่อค้นหาแบบไม่สนตัวพิมพ์เล็กใหญ่ | ทดสอบค้นคำว่า `ห้อง` แล้วแสดงเฉพาะ REQ-002 และ REQ-003 |
-| 12:34 | B2 | รวมการค้นหากับตัวกรองสถานะ | เพิ่ม `matchesStatus` และ `matchesSearch` แล้วใช้เงื่อนไข `&&` | ทดสอบค้น
-`ห้อง` พร้อมเลือกเสร็จสิ้น แล้วเหลือเฉพาะ REQ-003 |
-| 12:45 | B2 | เพิ่มข้อความเมื่อค้นหาไม่พบ และตรวจว่า summary ยังใช้ข้อมูลทั้งหมด | แก้ RequestList ให้แสดงข้อความเมื่อ requests ว่าง และคง summary จาก requests เดิม | ทดสอบค้น `zzz` แล้วไม่พบรายการ พร้อมตรวจ summary ยังเป็น 5/3/1/1 |
-| 12:57 | B3 | เพิ่มปุ่มทำเสร็จเฉพาะคำร้องที่ยังไม่ completed | เพิ่ม `onMarkDone` callback จาก Dashboard ผ่าน RequestList ไป RequestCard และตรวจ `request.status !== 'completed'` | ทดสอบพบปุ่มใน REQ-001, REQ-002, REQ-004, REQ-005 และไม่มีปุ่มใน REQ-003 |
-| 13:10 | B3 | เชื่อมปุ่มทำเสร็จกับการอัปเดตสถานะ | เรียก `updateRequestStatus(requestId, 'completed')` และใช้ `setRequests(nextRequests)` พร้อมส่ง callback ผ่าน RequestList | ทดสอบ REQ-001 เปลี่ยนเป็น completed ทันที ปุ่มหาย และ summary เป็น 5/2/1/2 |
-| 13:14 | B3 | ตรวจสอบว่าการเปลี่ยนสถานะยังคงอยู่หลัง refresh | ตรวจการ persist ผ่าน localStorage โดยไม่แก้ service | กด F5 แล้ว summary ยังเป็น 5/2/1/2 และตรวจพบ key `engse203-campus-requests-v1` ใน Local Storage |
-| 13:19 | B4 | สร้าง PriorityBadge component สำหรับ priority พื้นฐาน | สร้าง component ให้ urgent แสดง `เร่งด่วน` และ normal แสดง `ปกติ` พร้อม class ตามโจทย์ | ตรวจโค้ดและรัน `npm run build` ว่า build ผ่าน โดยยังไม่เชื่อมกับ RequestCard ตาม checkpoint B4.1 |
-| 13:27 | B4 | เพิ่มกรณี priority ที่ไม่รู้จักหรือไม่ได้ระบุ | เพิ่ม fallback ให้ PriorityBadge แสดง `ไม่ระบุ` พร้อม class `priority-unknown` | ทดสอบชั่วคราวด้วย `priority="high"` พบว่าแสดง `ไม่ระบุ` แล้วนำโค้ดทดสอบออก |
-| 13:31 | B4 | นำ PriorityBadge มาใช้จริงใน RequestCard | import PriorityBadge และแทนการแสดง `{request.priority}` ด้วย `<PriorityBadge priority={request.priority} />` | ทดสอบหน้า Dashboard พบว่า urgent แสดงเป็น `เร่งด่วน` และ normal แสดงเป็น `ปกติ` |
+| 11:18 | B1 | "React เตือนเรื่อง unique key ใน RequestList เกิดจากอะไร" | แนะนำให้กำหนด `key={request.id}` ให้ component ที่สร้างจาก `map()` | เพิ่ม key ให้ `RequestCard` แล้วตรวจหน้า Dashboard และ Console หลังแก้ |
+| 11:34 | B1 | "ทำไม summary จำนวน pending นับผิด" | แนะนำให้ตรวจเงื่อนไขที่ใช้กรอง status และเปลี่ยนจาก `completed` เป็น `pending` | แก้เงื่อนไขใน `DashboardPage.jsx` แล้วทดสอบ Summary ได้ค่าตรงกับข้อมูล |
+| 11:45 | B1 | "ทำไมเลือกตัวกรองสถานะแล้วแสดงรายการไม่ตรงกับที่เลือก" | พบว่าเงื่อนไขใช้ `!==` จึงแนะนำให้เปลี่ยนเป็น `===` | แก้เงื่อนไขแล้วเลือก pending ทดสอบ พบว่าแสดงเฉพาะรายการ pending |
+| 11:48 | B1 | "เปลี่ยน requestId ใน URL แล้วข้อมูลไม่เปลี่ยน เกิดจากอะไร" | แนะนำให้เพิ่ม `requestId` ใน dependency ของ `useEffect` | เพิ่ม dependency แล้วทดสอบเปลี่ยน URL จาก REQ-001 เป็น REQ-002 ข้อมูลเปลี่ยนตาม |
+| 11:58 | B1 | "ลบข้อมูลแล้วทำไม card ยังอยู่จนกว่าจะ refresh" | แนะนำให้นำ array ใหม่จาก `deleteRequest` มาอัปเดต state | เปลี่ยนเป็น `setRequests(nextRequests)` แล้วทดสอบว่าการ์ดหายทันที |
+| 12:09 | B1 | "กด Reset Demo Data แล้วหน้าพัง ควรตรวจตรงไหน" | แนะนำให้ตรวจว่า `resetRequests()` เป็น async หรือไม่ และรอผลก่อน setState | ตรวจ service พบว่าเป็น async จึงใช้ `await resetRequests()` แล้วทดสอบข้อมูลกลับมา 5 รายการ |
+| 12:22 | B2 | "เพิ่มช่องค้นหาแบบ controlled input ใน React ยังไง" | แนะนำให้สร้าง state `searchText` และผูก `value` กับ `onChange` | เพิ่ม input ตามโจทย์และทดสอบว่าพิมพ์ได้ โดยยังไม่กรองรายการใน B2.1 |
+| 12:29 | B2 | "ทำระบบค้นหาจากชื่อผู้แจ้งหรือรายละเอียดแบบไม่สนตัวพิมพ์เล็กใหญ่ยังไง" | แนะนำ `trim()`, `toLowerCase()` และ `includes()` กับ `requesterName` และ `details` | นำไปใช้กับ `.filter()` แล้วค้นคำว่า `ห้อง` ได้ REQ-002 และ REQ-003 ตรงโจทย์ |
+| 12:34 | B2 | "รวม search กับ status filter ให้ทำงานพร้อมกันยังไง" | แนะนำแยกเป็น `matchesStatus` และ `matchesSearch` แล้วรวมด้วย `&&` | แก้ filter แล้วทดสอบ completed + `ห้อง` พบเฉพาะ REQ-003 |
+| 12:45 | B2 | "ถ้าค้นหาไม่พบควรแสดงข้อความยังไง และทำยังไงให้ summary ไม่เปลี่ยนตาม search" | แนะนำให้ `RequestList` ตรวจ array ว่าง และให้ Summary คำนวณจาก `requests` ทั้งหมด | เพิ่มข้อความ `ไม่พบคำร้องที่ตรงกับการค้นหา` แล้วค้น `zzz` พบว่าไม่มีรายการ แต่ Summary ยังใช้ข้อมูลทั้งหมด |
+| 12:57 | B3 | "เพิ่มปุ่มทำเสร็จเฉพาะรายการที่ยังไม่ completed และส่ง callback ยังไง" | แนะนำส่ง `onMarkDone` จาก Dashboard ผ่าน RequestList ไป RequestCard และตรวจ `status !== 'completed'` | เพิ่ม callback และทดสอบว่ามีปุ่มใน REQ-001, REQ-002, REQ-004, REQ-005 แต่ไม่มีใน REQ-003 |
+| 13:10 | B3 | "กดทำเสร็จแล้วจะอัปเดตสถานะและหน้าจอทันทียังไง" | แนะนำเรียก `updateRequestStatus(requestId, 'completed')` แล้ว `setRequests(nextRequests)` | นำไปใช้แล้วทดสอบ REQ-001 เปลี่ยนเป็น completed ปุ่มหาย และ Summary เปลี่ยนเป็น 5/2/1/2 |
+| 13:14 | B3 | "ตรวจยังไงว่าการเปลี่ยนสถานะ persist หลัง refresh จริง" | แนะนำให้ F5 แล้วตรวจข้อมูลและ Local Storage | กด F5 แล้ว Summary ยังเป็น 5/2/1/2 และพบ key `engse203-campus-requests-v1` ใน Local Storage |
+| 13:19 | B4 | "สร้าง PriorityBadge ให้แสดง urgent และ normal ตามค่าที่รับมายังไง" | แนะนำสร้าง component รับ prop `priority` แล้วใช้เงื่อนไขเลือกข้อความและ class | สร้าง component ให้ urgent เป็น `เร่งด่วน` และ normal เป็น `ปกติ` แล้วรัน build ตรวจว่าไม่มี error |
+| 13:27 | B4 | "ถ้า PriorityBadge ได้ค่าอื่นหรือไม่มีค่าควรทำยังไง" | แนะนำเพิ่ม fallback สำหรับค่าที่ไม่รู้จัก | เพิ่ม `priority-unknown` แสดง `ไม่ระบุ` และทดสอบชั่วคราวด้วย `priority="high"` ได้ผลถูกต้อง ก่อนนำโค้ดทดสอบออก |
+| 13:31 | B4 | "นำ PriorityBadge ไปใช้แทน request.priority ใน RequestCard ยังไง" | แนะนำ import component แล้วใช้ `<PriorityBadge priority={request.priority} />` | แทน raw priority แล้วทดสอบ Dashboard พบ urgent แสดง `เร่งด่วน` และ normal แสดง `ปกติ` |
+
+---
+
+## คำรับรอง
+
+ฉันเข้าใจโค้ดทุกส่วนที่ส่ง และพร้อมอธิบายใน oral
+
+**ลงชื่อ:** นางสาวนภัสประภา กุลสุทธิเสถียร
