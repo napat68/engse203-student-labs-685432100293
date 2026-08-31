@@ -51,10 +51,16 @@ function DashboardPage() {
 
   const normalizedSearch = searchText.trim().toLowerCase();
 
-  const filteredRequests = requests.filter((request) =>
-    request.requesterName.toLowerCase().includes(normalizedSearch)
-    || request.details.toLowerCase().includes(normalizedSearch)
-  );
+  const filteredRequests = requests.filter((request) => {
+    const matchesStatus =
+      statusFilter === 'all' || request.status === statusFilter;
+
+    const matchesSearch =
+      request.requesterName.toLowerCase().includes(normalizedSearch)
+      || request.details.toLowerCase().includes(normalizedSearch);
+
+    return matchesStatus && matchesSearch;
+  });
 
   function handleRetry() {
     if (scenario) setSearchParams({});
