@@ -4,8 +4,8 @@
   "status": "submitted",
   "sourceOrigin": "course-starter",
   "originalRepoUrl": "https://github.com/napat68/engse203-student-labs-685432100293",
-  "originalCommit": "",
-  "pullRequestUrl": "",
+  "originalCommit": "4cc642e",
+  "pullRequestUrl": "https://github.com/napat68/engse203-student-labs-685432100293/pull/7",
   "submissionTag": "lab-07-submission-v1",
   "testStatus": "pass",
   "notes": "เชื่อมต่อ React Frontend กับ Express REST API พร้อม CORS, Environment Configuration, Service Layer, Validation, Error Handling, Morgan Logging และ Automated Testing ด้วย Supertest โดย LAB Checker ผ่าน 36/36 และ Automated Test ผ่าน 6/6"
