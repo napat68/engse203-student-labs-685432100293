@@ -8,6 +8,5 @@
   "pullRequestUrl": "",
   "submissionTag": "",
   "testStatus": "pass",
-  "notes": "เธเธฑเธ’เธเธฒ Express API เธเธฃเธ GET, POST, PUT เนเธฅเธฐ DELETE เธเธฃเนเธญเธก Validation, Logger, Error Handling เนเธฅเธฐ Challenge เธเนเธฒเธ LAB checker 28/28 เนเธฅเธฐเธ—เธ”เธชเธญเธ API เธ”เนเธงเธข Postman เน€เธฃเธตเธขเธเธฃเนเธญเธข"
-}
+  "notes": "พัฒนา Express API ครบ GET, POST, PUT และ DELETE พร้อม Validation, Logger, Error Handling และ Challenge ผ่าน LAB checker 28/28 และทดสอบ API ด้วย Postman เรียบร้อย"
 
