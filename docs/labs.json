@@ -67,7 +67,7 @@
     "week": "week-05",
     "title": "React Campus Service Request",
     "status": "submitted",
-    "sourceOrigin": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-05",
+    "sourceOrigin": "course-starter",
     "originalRepoUrl": "https://github.com/napat68/engse203-student-labs-685432100293",
     "originalCommit": "e129c4febbcaf6e64c563598310d4ef1ee435871",
     "pullRequestUrl": "https://github.com/napat68/engse203-student-labs-685432100293/pull/1",
@@ -78,5 +78,21 @@
     "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-05/labs/week-05/source",
     "hasPublish": true,
     "sourceEntries": 11
+  },
+  {
+    "week": "week-06",
+    "title": "Express API Foundation",
+    "status": "draft",
+    "sourceOrigin": "course-starter",
+    "originalRepoUrl": "https://github.com/napat68/engse203-student-labs-685432100293",
+    "originalCommit": "",
+    "pullRequestUrl": "",
+    "submissionTag": "",
+    "testStatus": "pass",
+    "notes": "พัฒนา Express API ครบ GET, POST, PUT และ DELETE พร้อม Validation, Logger, Error Handling และ Challenge ผ่าน LAB checker 28/28 และทดสอบ API ด้วย Postman เรียบร้อย",
+    "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-06/",
+    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-06/labs/week-06/source",
+    "hasPublish": false,
+    "sourceEntries": 6
   }
 ]
