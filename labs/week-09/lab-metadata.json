@@ -1,0 +1,12 @@
+{
+  "week": "week-09",
+  "title": "Relational Database & SQL (SQLite)",
+  "status": "submitted",
+  "sourceOrigin": "course-starter",
+  "originalRepoUrl": "https://github.com/napat68/engse203-student-labs-685432100293",
+  "originalCommit": "",
+  "pullRequestUrl": "",
+  "submissionTag": "",
+  "testStatus": "pass",
+  "notes": "ออกแบบฐานข้อมูลเชิงสัมพันธ์ด้วย SQLite สำหรับ Campus Service Request มีตาราง users และ requests พร้อม Primary Key, Foreign Key, Constraints, JOIN, SQL Queries และ Challenge โดย LAB09 Checker ผ่าน 30/30 และ Constraint Testing ผ่าน 5/5"
+}
