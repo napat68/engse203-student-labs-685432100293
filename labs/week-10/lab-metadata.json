@@ -4,8 +4,8 @@
   "status": "submitted",
   "sourceOrigin": "course-starter",
   "originalRepoUrl": "https://github.com/napat68/engse203-student-labs-685432100293",
-  "originalCommit": "",
-  "pullRequestUrl": "",
+  "originalCommit": "25b99c1",
+  "pullRequestUrl": "https://github.com/napat68/engse203-student-labs-685432100293/pull/9",
   "submissionTag": "lab-10-submission-v1",
   "testStatus": "pass",
   "notes": "เชื่อมต่อ Node.js และ Express API กับฐานข้อมูล SQLite ผ่าน Service Layer รองรับ SQL JOIN และ CRUD ครบถ้วน โดย Week 10 Lab Checker ผ่าน 20/20"
