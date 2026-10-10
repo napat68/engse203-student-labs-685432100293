@@ -1,12 +1,12 @@
 {
   "week": "week-11",
   "title": "Full-stack Integration",
-  "status": "draft",
+  "status": "in-progress",
   "sourceOrigin": "course-starter",
   "originalRepoUrl": "",
   "originalCommit": "",
   "pullRequestUrl": "",
   "submissionTag": "",
-  "testStatus": "not-tested",
-  "notes": ""
+  "testStatus": "passed",
+  "notes": "Week11 checker 41/41: In-class 17/17, Take-home 20/20, Challenge 4/4. Production tested locally on port 10000. Render deployment, LAB Portfolio, and demo videos pending."
 }
