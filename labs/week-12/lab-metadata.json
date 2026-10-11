@@ -1,0 +1,12 @@
+{
+  "week": "week-12",
+  "title": "Testing & Debugging",
+  "status": "ready",
+  "sourceOrigin": "course-starter",
+  "originalRepoUrl": "",
+  "originalCommit": "",
+  "pullRequestUrl": "",
+  "submissionTag": "lab-12-submission-v1",
+  "testStatus": "pass",
+  "notes": "LAB12 In-Class CP44-CP47 passed 20/20. API tests 27/27. Frontend tests 2/2. Bugs 0-3 fixed with regression tests."
+}
