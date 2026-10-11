@@ -1,0 +1,45 @@
+name: LAB11 CI
+
+on:
+  push:
+    branches:
+      - lab/week-11
+  pull_request:
+    paths:
+      - 'labs/week-11/**'
+      - '.github/workflows/lab11-ci.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: labs/week-11/source
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install API dependencies
+        run: npm ci --include=dev --prefix api
+
+      - name: Install frontend dependencies
+        run: npm ci --include=dev --prefix frontend
+
+      - name: Build frontend
+        run: npm run build --prefix frontend
+
+      - name: Check LAB11
+        run: node --disable-warning=ExperimentalWarning check-week11.mjs
+
+      - name: Check Week10 regression
+        run: node --disable-warning=ExperimentalWarning check-week10.mjs
+
+      - name: Check Week07 regression
+        run: node --disable-warning=ExperimentalWarning check-week07.mjs
