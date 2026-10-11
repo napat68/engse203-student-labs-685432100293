@@ -58,10 +58,10 @@ for (const week of labs) {
     await fs.cp(publishRoot, target, { recursive: true });
   } else {
     const sourceUrl =
-      `${repoUrl}/tree/lab/${week}/labs/${week}/source`;
+      `${repoUrl}/tree/main/labs/${week}/source`
 
     const evidenceUrl =
-      `${repoUrl}/tree/lab/${week}/labs/${week}/evidence`;
+      `${repoUrl}/tree/main/labs/${week}/evidence`
 
     const originalUrl = validHttpUrl(metadata.originalRepoUrl);
 
@@ -138,7 +138,7 @@ ${escapeHtml(metadata.notes || "")}
   }
 
   const sourceUrl =
-    `${repoUrl}/tree/lab/${week}/labs/${week}/source`;
+    `${repoUrl}/tree/main/labs/${week}/source`
 
   const prUrl = validHttpUrl(metadata.pullRequestUrl);
 

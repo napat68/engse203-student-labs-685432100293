@@ -11,7 +11,7 @@
     "testStatus": "pass",
     "notes": "ตั้งค่า Developer Environment และ Git/GitHub สำเร็จ ทดสอบ npm run start, npm run check และ Repository Verification ผ่านเรียบร้อย",
     "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-01/",
-    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-01/labs/week-01/source",
+    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/main/labs/week-01/source",
     "hasPublish": false,
     "sourceEntries": 7
   },
@@ -27,7 +27,7 @@
     "testStatus": "pass",
     "notes": "งาน LAB Week 02 จาก Repository เดิม",
     "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-02/",
-    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-02/labs/week-02/source",
+    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/main/labs/week-02/source",
     "hasPublish": true,
     "sourceEntries": 11
   },
@@ -43,7 +43,7 @@
     "testStatus": "pass",
     "notes": "งาน LAB Week 03 จาก Repository เดิม",
     "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-03/",
-    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-03/labs/week-03/source",
+    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/main/labs/week-03/source",
     "hasPublish": true,
     "sourceEntries": 15
   },
@@ -59,7 +59,7 @@
     "testStatus": "pass",
     "notes": "พัฒนา React Campus Service Request ครบตาม LAB 04 ผ่าน npm run check, npm run build และ Manual Test รวม Responsive 375px",
     "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-04/",
-    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-04/labs/week-04/source",
+    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/main/labs/week-04/source",
     "hasPublish": true,
     "sourceEntries": 12
   },
@@ -75,7 +75,7 @@
     "testStatus": "pass",
     "notes": "ทำโจทย์ 5A และ 5B ครบถ้วน ผ่าน LAB checker 133/133 และทดสอบ Manual Test เรียบร้อย",
     "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-05/",
-    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-05/labs/week-05/source",
+    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/main/labs/week-05/source",
     "hasPublish": true,
     "sourceEntries": 11
   },
@@ -91,7 +91,7 @@
     "testStatus": "pass",
     "notes": "พัฒนา Express API ครบ GET, POST, PUT และ DELETE พร้อม Validation, Logger, Error Handling และ Challenge ผ่าน LAB checker 28/28 และทดสอบ API ด้วย Postman เรียบร้อย",
     "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-06/",
-    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-06/labs/week-06/source",
+    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/main/labs/week-06/source",
     "hasPublish": false,
     "sourceEntries": 6
   },
@@ -107,7 +107,7 @@
     "testStatus": "pass",
     "notes": "เชื่อมต่อ React Frontend กับ Express REST API พร้อม CORS, Environment Configuration, Service Layer, Validation, Error Handling, Morgan Logging และ Automated Testing ด้วย Supertest โดย LAB Checker ผ่าน 36/36 และ Automated Test ผ่าน 6/6",
     "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-07/",
-    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-07/labs/week-07/source",
+    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/main/labs/week-07/source",
     "hasPublish": true,
     "sourceEntries": 5
   },
@@ -123,7 +123,7 @@
     "testStatus": "pass",
     "notes": "ออกแบบฐานข้อมูลเชิงสัมพันธ์ด้วย SQLite สำหรับ Campus Service Request มีตาราง users และ requests พร้อม Primary Key, Foreign Key, Constraints, JOIN, SQL Queries และ Challenge โดย LAB09 Checker ผ่าน 30/30 และ Constraint Testing ผ่าน 5/5",
     "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-09/",
-    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-09/labs/week-09/source",
+    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/main/labs/week-09/source",
     "hasPublish": false,
     "sourceEntries": 8
   },
@@ -139,7 +139,7 @@
     "testStatus": "pass",
     "notes": "เชื่อมต่อ Node.js และ Express API กับฐานข้อมูล SQLite ผ่าน Service Layer รองรับ SQL JOIN และ CRUD ครบถ้วน โดย Week 10 Lab Checker ผ่าน 20/20",
     "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-10/",
-    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-10/labs/week-10/source",
+    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/main/labs/week-10/source",
     "hasPublish": false,
     "sourceEntries": 5
   },
@@ -155,8 +155,24 @@
     "testStatus": "pass",
     "notes": "Week11 checker 41/41: In-class 17/17, Take-home 20/20, Challenge 4/4. Week07 regression 36/36 and Week10 regression 31/31. GitHub Actions CI passed. Production deployed successfully on Render: https://campus-service-685432100293.onrender.com. LAB Portfolio generated with Week11. Demo videos pending.",
     "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-11/",
-    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/lab/week-11/labs/week-11/source",
+    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/main/labs/week-11/source",
     "hasPublish": true,
     "sourceEntries": 13
+  },
+  {
+    "week": "week-12",
+    "title": "Testing & Debugging",
+    "status": "ready",
+    "sourceOrigin": "course-starter",
+    "originalRepoUrl": "",
+    "originalCommit": "",
+    "pullRequestUrl": "",
+    "submissionTag": "lab-12-submission-v2",
+    "testStatus": "pass",
+    "notes": "LAB12 In-Class CP44-CP47 passed 20/20. API tests 27/27. Frontend tests 2/2. Bugs 0-3 fixed with regression tests.",
+    "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-12/",
+    "sourceUrl": "https://github.com/napat68/engse203-student-labs-685432100293/tree/main/labs/week-12/source",
+    "hasPublish": false,
+    "sourceEntries": 17
   }
 ]
