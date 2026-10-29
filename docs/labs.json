@@ -162,7 +162,7 @@
   {
     "week": "week-12",
     "title": "Testing & Debugging",
-    "status": "ready",
+    "status": "submitted",
     "sourceOrigin": "course-starter",
     "originalRepoUrl": "",
     "originalCommit": "",
@@ -178,12 +178,12 @@
   {
     "week": "week-13",
     "title": "Security and Authentication",
-    "status": "ready",
+    "status": "submitted",
     "sourceOrigin": "course-starter",
     "originalRepoUrl": "",
     "originalCommit": "",
     "pullRequestUrl": "https://github.com/napat68/engse203-student-labs-685432100293/pull/16",
-    "submissionTag": "",
+    "submissionTag": "lab-13-submission-v1",
     "testStatus": "pass",
     "notes": "CP48-CP52 completed. Week 13 checker passed 23/23 classroom requirements. Additional challenges 0/4.",
     "pageUrl": "https://napat68.github.io/engse203-student-labs-685432100293/labs/week-13/",
