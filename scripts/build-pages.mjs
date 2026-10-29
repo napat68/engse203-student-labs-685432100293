@@ -164,11 +164,14 @@ ${escapeHtml(metadata.notes || "")}
     "utf8"
   );
 
-  // เฉพาะ LAB11 ให้ View Result เปิด Render โดยตรง
-  const resultUrl =
-    week === "week-11"
-      ? LAB11_RENDER_URL
-      : `labs/${week}/`;
+  // LAB11, LAB12 และ LAB13 ให้ View Result เปิด Render โดยตรง
+  const renderUrls = {
+    "week-11": LAB11_RENDER_URL,
+    "week-12": "https://campus-service-napat-week12.onrender.com/",
+    "week-13": "https://campus-service-napat-week13.onrender.com/",
+  };
+
+  const resultUrl = renderUrls[week] ?? `labs/${week}/`;
 
   const prLink = prUrl
     ? `<a href="${escapeHtml(prUrl)}">Pull Request</a>`
