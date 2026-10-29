@@ -1,3 +1,4 @@
+
 import fs from "node:fs/promises";
 import path from "node:path";
 import {
@@ -21,10 +22,33 @@ const repoUrl =
 const pagesBase =
   `https://${config.githubUsername}.github.io/${config.repositoryName}`;
 
-// LAB11: เปิด Render โดยตรงจากปุ่ม View Result
-const LAB11_RENDER_URL =
-  "https://campus-service-685432100293.onrender.com/";
+// URL ของ Render สำหรับ LAB 11, 12 และ 13
+const renderUrls = {
+  "week-11": "https://campus-service-685432100293.onrender.com/",
+  "week-12": "https://campus-service-napat-week12.onrender.com/",
+  "week-13": "https://campus-service-napat-week13.onrender.com/",
+};
 
+// LAB 12 และ LAB 13 มี Source Code อยู่ใน Branch main แล้ว
+// LAB อื่นยังคงใช้ Branch lab/week-XX ตามรูปแบบเดิม
+function getSourceUrl(week) {
+  if (week === "week-12" || week === "week-13") {
+    return `${repoUrl}/tree/main/labs/${week}/source`;
+  }
+
+  return `${repoUrl}/tree/lab/${week}/labs/${week}/source`;
+}
+
+// URL สำหรับ Evidence
+function getEvidenceUrl(week) {
+  if (week === "week-12" || week === "week-13") {
+    return `${repoUrl}/tree/main/labs/${week}/evidence`;
+  }
+
+  return `${repoUrl}/tree/lab/${week}/labs/${week}/evidence`;
+}
+
+// สร้างโฟลเดอร์ docs ใหม่สำหรับ GitHub Pages
 await fs.rm(docsRoot, { recursive: true, force: true });
 await fs.mkdir(path.join(docsRoot, "labs"), { recursive: true });
 await fs.writeFile(path.join(docsRoot, ".nojekyll"), "", "utf8");
@@ -54,15 +78,13 @@ for (const week of labs) {
 
   await fs.mkdir(target, { recursive: true });
 
+  // กำหนดลิงก์ Source และ Evidence ของแต่ละ LAB
+  const sourceUrl = getSourceUrl(week);
+  const evidenceUrl = getEvidenceUrl(week);
+
   if (hasPublish) {
     await fs.cp(publishRoot, target, { recursive: true });
   } else {
-    const sourceUrl =
-      `${repoUrl}/tree/lab/${week}/labs/${week}/source`;
-
-    const evidenceUrl =
-      `${repoUrl}/tree/lab/${week}/labs/${week}/evidence`;
-
     const originalUrl = validHttpUrl(metadata.originalRepoUrl);
 
     const report = `<!doctype html>
@@ -137,9 +159,6 @@ ${escapeHtml(metadata.notes || "")}
     );
   }
 
-  const sourceUrl =
-    `${repoUrl}/tree/lab/${week}/labs/${week}/source`;
-
   const prUrl = validHttpUrl(metadata.pullRequestUrl);
 
   const pageUrl = `${pagesBase}/labs/${week}/`;
@@ -164,20 +183,15 @@ ${escapeHtml(metadata.notes || "")}
     "utf8"
   );
 
-  // LAB11, LAB12 และ LAB13 ให้ View Result เปิด Render โดยตรง
-  const renderUrls = {
-    "week-11": LAB11_RENDER_URL,
-    "week-12": "https://campus-service-napat-week12.onrender.com/",
-    "week-13": "https://campus-service-napat-week13.onrender.com/",
-  };
-
+  // LAB 11, 12 และ 13 เปิดเว็บไซต์บน Render โดยตรง
+  // LAB อื่นเปิดหน้าผลงานบน GitHub Pages ตามเดิม
   const resultUrl = renderUrls[week] ?? `labs/${week}/`;
 
   const prLink = prUrl
     ? `<a href="${escapeHtml(prUrl)}">Pull Request</a>`
     : "";
 
-  // สร้างการ์ด LAB โดยปิดแท็ก HTML ให้ครบทุกส่วน
+  // สร้างการ์ดแต่ละ LAB บนหน้า Portfolio
   cards.push(`
   <article class="lab-card" data-status="${escapeHtml(metadata.status)}">
 
